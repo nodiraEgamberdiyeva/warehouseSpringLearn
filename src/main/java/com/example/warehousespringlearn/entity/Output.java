@@ -16,13 +16,13 @@ public class Output {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Timestamp date;
-    @Column(nullable = false)
+
     @ManyToOne
     private Warehouse warehouse;
-    @Column(nullable = false)
+
     @ManyToOne
     private Currency currency;
-    @Column(nullable = false)
+
     @ManyToOne
     private Client client;
     @Column(nullable = false)

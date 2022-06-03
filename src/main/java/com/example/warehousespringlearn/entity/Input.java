@@ -17,13 +17,10 @@ public class Input {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Timestamp date;
-    @Column(nullable = false)
     @ManyToOne
     private Warehouse warehouse;
-    @Column(nullable = false)
     @ManyToOne
     private Currency currency;
-    @Column(nullable = false)
     @ManyToOne
     private Supplier supplier;
     @Column(nullable = false)
