@@ -15,5 +15,4 @@ import javax.persistence.Id;
 @Data
 @Entity
 public class Currency extends AbstractEntity {
-
 }
