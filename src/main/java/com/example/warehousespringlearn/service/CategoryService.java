@@ -58,6 +58,9 @@ public class CategoryService {
         if (id== categoryDto.getParentCategoryId()){
             return new Result("parent id can not be same with category id", false);
         }
+        if (categoryRepository.existsByName(categoryDto.getName())){
+            return new Result("category already exist", false);
+        }
         Optional<Category> categoryById = categoryRepository.findById(id);
         if (categoryById.isPresent()){
             Category category = categoryById.get();

@@ -27,9 +27,4 @@ public class Input {
     private String factureNumber;
     @Column(unique = true, nullable = false)
     private String code;
-
-
-
-
-
 }
