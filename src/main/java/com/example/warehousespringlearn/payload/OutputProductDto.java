@@ -16,7 +16,5 @@ public class OutputProductDto {
     private Integer productId;
     private Long amount;
     private BigDecimal price;
-
-
     private Integer outputId;
 }

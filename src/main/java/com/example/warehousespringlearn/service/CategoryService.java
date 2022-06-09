@@ -1,7 +1,6 @@
 package com.example.warehousespringlearn.service;
 
 import com.example.warehousespringlearn.entity.Category;
-import com.example.warehousespringlearn.entity.Measurement;
 import com.example.warehousespringlearn.payload.CategoryDto;
 import com.example.warehousespringlearn.payload.Result;
 import com.example.warehousespringlearn.repository.CategoryRepository;
