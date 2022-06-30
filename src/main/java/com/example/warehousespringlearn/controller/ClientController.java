@@ -6,6 +6,7 @@ import com.example.warehousespringlearn.payload.Result;
 import com.example.warehousespringlearn.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,6 +15,7 @@ public class ClientController {
     @Autowired
     private ClientService clientService;
 
+    @PreAuthorize("hasAnyAuthority('READ_ALL_ATTACHMENT', 'ALL')")
     @GetMapping
     public Page<Client> getAllClients(@RequestParam int page){
         return clientService.getAllClients(page);
@@ -34,6 +36,7 @@ public class ClientController {
         return clientService.editClient(id, client);
     }
 
+    @PreAuthorize("hasAnyRole('DIRECTOR')")
     @DeleteMapping("/{id}")
     public Result deleteMeasurement(@PathVariable Integer id){
         return clientService.deleteClientById(id);
